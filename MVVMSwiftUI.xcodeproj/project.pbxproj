@@ -21,6 +21,7 @@
 		3C0B8AA624120AF700C98255 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA524120AF700C98255 /* NetworkLayer.swift */; };
 		3C0B8AA824120CD300C98255 /* UserPostSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA724120CD300C98255 /* UserPostSectionViewModel.swift */; };
 		3C0B8AAA24120EE900C98255 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA924120EE900C98255 /* User.swift */; };
+		3C0B8AAC2412F3C600C98255 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AAB2412F3C600C98255 /* UserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3C0B8AA524120AF700C98255 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		3C0B8AA724120CD300C98255 /* UserPostSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostSectionViewModel.swift; sourceTree = "<group>"; };
 		3C0B8AA924120EE900C98255 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3C0B8AAB2412F3C600C98255 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				3C0B8A992411703F00C98255 /* UserHorizontalSectionViewModel.swift */,
 				3C0B8AA724120CD300C98255 /* UserPostSectionViewModel.swift */,
 				3C0B8A9B2411798400C98255 /* PostView.swift */,
+				3C0B8AAB2412F3C600C98255 /* UserView.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				3C0B8A8924116C7600C98255 /* ContentView.swift in Sources */,
 				3C0B8AA42411B76F00C98255 /* HTTPError.swift in Sources */,
 				3C0B8AA02411B75A00C98255 /* Post.swift in Sources */,
+				3C0B8AAC2412F3C600C98255 /* UserView.swift in Sources */,
 				3C0B8AA824120CD300C98255 /* UserPostSectionViewModel.swift in Sources */,
 				3C0B8A9C2411798400C98255 /* PostView.swift in Sources */,
 				3C0B8A9A2411703F00C98255 /* UserHorizontalSectionViewModel.swift in Sources */,

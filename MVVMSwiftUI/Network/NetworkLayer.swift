@@ -18,13 +18,13 @@ class NetworkLayer:ObservableObject {
     
     @Published var usersArray = [User]()
     
-    private let dummyPost = Post(id: 8, title: "Sample Title", body: "Sample body Text", userId: 10)
+    private let dummyPost = Post(id: 8, title: "Loading...", body: "", userId: 10)
     
     private let dummyUser = User(id: -1, name: "Loading...", email: "name@domain.com", phone: "000-000-0000")
     
     init() {
         fetchUsersFromAPI()
-        fetchAllPostFromAPI()
+        fetchAllPostFromAPI() 
     }
     
     func fetchUsersFromAPI() {

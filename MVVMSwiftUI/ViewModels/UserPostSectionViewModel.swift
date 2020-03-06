@@ -11,7 +11,7 @@ import Combine
 
 struct UserPostSectionViewModel: View {
     
-    @ObservedObject var networkLayer = NetworkLayer()
+    @EnvironmentObject var networkLayer:NetworkLayer
     
     var body: some View { 
         List(networkLayer.postsArray, id: \.id) { item in

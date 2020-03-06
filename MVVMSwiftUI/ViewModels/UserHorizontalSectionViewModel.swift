@@ -11,7 +11,7 @@ import Combine
 
 struct UserHorizontalSectionViewModel: View {
     
-    @ObservedObject var networkLayer = NetworkLayer()
+    @EnvironmentObject var networkLayer:NetworkLayer
      
     var body: some View {
         ScrollView(.horizontal) {
@@ -19,6 +19,7 @@ struct UserHorizontalSectionViewModel: View {
                 ForEach(networkLayer.usersArray, id: \.name) { userObj in
                     UserView(user: userObj).onTapGesture {
                         self.networkLayer.fetchUserPostFromAPI(userId: "\(userObj.id)")
+                        self.networkLayer.objectWillChange.send()
                     }
                 }
             }
@@ -33,24 +34,4 @@ struct UserHorizontalSectionViewModel_Previews: PreviewProvider {
         UserHorizontalSectionViewModel()
     }
 }
-
-
-
-struct UserView: View {
-    
-    var user:User
-    
-    var body: some View {
-        VStack(alignment: .center) {
-            Image("familyRoomCoupleDog2572")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width:100, height: 100)
-                .clipShape(Circle())
-                .overlay(
-                    Circle().stroke(Color.white, lineWidth: 4))
-                .shadow(radius: 3)
-            Text(user.name)
-        }.padding(10)
-    }
-}
+ 
