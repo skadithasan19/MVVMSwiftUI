@@ -9,21 +9,19 @@
 import SwiftUI
 
 struct PostView:View {
+    
+    var post:Post
     var body: some View {
         VStack(alignment: .leading,spacing: 10) {
-            Text("Jump to Presidential campaigns - A political campaign is an organized effort which seeks to influence the decision making progress within a specific group. In democracies, political campaigns often refer to electoral campaigns, by which representatives are chosen or referendums are decided.")
+            Text(post.body)
                 .font(.subheadline)
                 .foregroundColor(Color.gray)
+            
+            Text(post.title)
+                .font(.title)
+                .foregroundColor(.black)
                 .lineLimit(nil)
-            
-            Text("@2020 World Election")
-                .font(.title).foregroundColor(.black)
-            
         }
     }
 }
-struct PostView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostView()
-    }
-}
+ 

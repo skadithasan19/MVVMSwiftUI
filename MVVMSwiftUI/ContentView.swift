@@ -13,23 +13,15 @@ struct ContentView: View {
     init() {
         UITableView.appearance().separatorColor = .clear // cell separator
     }
-    @State var navigationLinkActive = false
+    
     var body: some View {
         
         NavigationView {
-            List {
+            VStack {
                 UserHorizontalSectionView()
-                NavigationLink(destination: UserHorizontalSectionView(), isActive: $navigationLinkActive) {
-                    PostView()
-                }
-                PostView()
-                PostView()
-                PostView()
-                PostView()
-                PostView()
+                UserPostSectionView()
             }
-                
-            .navigationBarTitle("News Title")
+            .navigationBarTitle("User Post's")
         }
     }
     
@@ -40,3 +32,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 } 
+ 

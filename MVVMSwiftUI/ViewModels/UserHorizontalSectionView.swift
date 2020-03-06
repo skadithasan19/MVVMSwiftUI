@@ -7,23 +7,23 @@
 //
 
 import SwiftUI
+import Combine
 
 struct UserHorizontalSectionView: View {
+    
+    @ObservedObject var networkLayer = NetworkLayer()
+     
     var body: some View {
         ScrollView(.horizontal) {
-            HStack {
-                UserView()
-                UserView()
-                UserView()
-                UserView()
-                UserView()
-                UserView()
-                UserView()
-                UserView()
-                UserView()
+            HStack(spacing: 10) {
+                ForEach(networkLayer.usersArray, id: \.name) { userObj in
+                    UserView(user: userObj)
+                }
             }
+            .padding(.leading, 10)
         }
     }
+    
 }
 
 struct UserHorizontalSectionView_Previews: PreviewProvider {
@@ -35,6 +35,9 @@ struct UserHorizontalSectionView_Previews: PreviewProvider {
 
 
 struct UserView: View {
+    
+    var user:User
+    
     var body: some View {
         VStack(alignment: .center) {
             Image("familyRoomCoupleDog2572")
@@ -45,8 +48,7 @@ struct UserView: View {
                 .overlay(
                     Circle().stroke(Color.white, lineWidth: 4))
                 .shadow(radius: 3)
-            
-            Text("Adit")
+            Text(user.name)
         }.padding(10)
     }
 }
