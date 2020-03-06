@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-struct UserPostSectionView: View {
+struct UserPostSectionViewModel: View {
     
     @ObservedObject var networkLayer = NetworkLayer()
     
@@ -20,8 +20,8 @@ struct UserPostSectionView: View {
     }
 }
 
-struct UserPostSectionView_Previews: PreviewProvider {
+struct UserPostSectionViewModel_Previews: PreviewProvider {
     static var previews: some View {
-        UserPostSectionView()
+        UserPostSectionViewModel()
     }
 }

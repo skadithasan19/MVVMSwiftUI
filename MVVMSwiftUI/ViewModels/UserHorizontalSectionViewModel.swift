@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-struct UserHorizontalSectionView: View {
+struct UserHorizontalSectionViewModel: View {
     
     @ObservedObject var networkLayer = NetworkLayer()
      
@@ -17,7 +17,9 @@ struct UserHorizontalSectionView: View {
         ScrollView(.horizontal) {
             HStack(spacing: 10) {
                 ForEach(networkLayer.usersArray, id: \.name) { userObj in
-                    UserView(user: userObj)
+                    UserView(user: userObj).onTapGesture {
+                        self.networkLayer.fetchUserPostFromAPI(userId: "\(userObj.id)")
+                    }
                 }
             }
             .padding(.leading, 10)
@@ -26,9 +28,9 @@ struct UserHorizontalSectionView: View {
     
 }
 
-struct UserHorizontalSectionView_Previews: PreviewProvider {
+struct UserHorizontalSectionViewModel_Previews: PreviewProvider {
     static var previews: some View {
-        UserHorizontalSectionView()
+        UserHorizontalSectionViewModel()
     }
 }
 

@@ -18,14 +18,17 @@ class NetworkLayer:ObservableObject {
     
     @Published var usersArray = [User]()
     
+    private let dummyPost = Post(id: 8, title: "Sample Title", body: "Sample body Text", userId: 10)
+    
+    private let dummyUser = User(id: -1, name: "Loading...", email: "name@domain.com", phone: "000-000-0000")
     
     init() {
         fetchUsersFromAPI()
-        fetchPostFromAPI()
+        fetchAllPostFromAPI()
     }
     
     func fetchUsersFromAPI() {
-        usersArray.append(User(id: -1, name: "Loading...", email: "name@domain.com", phone: "000-000-0000"))
+        usersArray.append(dummyUser) // Added for test
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { return }
         URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { output in
@@ -43,8 +46,9 @@ class NetworkLayer:ObservableObject {
         }).store(in: &subscribers)
     }
     
-    func fetchPostFromAPI() {
+    func fetchAllPostFromAPI() {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+     
         URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { output in
                 guard let response = output.response as? HTTPURLResponse, response.statusCode == 200 else {
@@ -58,6 +62,26 @@ class NetworkLayer:ObservableObject {
         .receive(on: RunLoop.main)
         .sink(receiveValue: { posts in
             self.postsArray = posts
+        }).store(in: &subscribers)
+    }
+    
+    func fetchUserPostFromAPI(userId:String) {
+        self.postsArray.removeAll()
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts/\(userId)") else { return }
+        URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { output in
+                guard let response = output.response as? HTTPURLResponse, response.statusCode == 200 else {
+                    throw HTTPError.statusCode
+                }
+                return output.data
+        }
+        .decode(type: Post.self, decoder: JSONDecoder())
+        .replaceError(with: dummyPost)
+        .eraseToAnyPublisher()
+        .receive(on: RunLoop.main)
+        .sink(receiveValue: { postObject in
+            self.postsArray = [postObject]
+            print(self.postsArray)
         }).store(in: &subscribers)
     }
     
