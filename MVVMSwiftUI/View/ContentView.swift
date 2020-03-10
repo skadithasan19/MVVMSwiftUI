@@ -18,7 +18,7 @@ struct ContentView: View {
         
         NavigationView {
             VStack {
-                UserHorizontalSectionViewModel()
+                UserHorizontalSectionView()
                 UserPostSectionViewModel()
             }
             .navigationBarTitle("User Post's")

@@ -13,7 +13,7 @@
 		3C0B8A8B24116C7700C98255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C0B8A8A24116C7700C98255 /* Assets.xcassets */; };
 		3C0B8A8E24116C7700C98255 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C0B8A8D24116C7700C98255 /* Preview Assets.xcassets */; };
 		3C0B8A9124116C7700C98255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0B8A8F24116C7700C98255 /* LaunchScreen.storyboard */; };
-		3C0B8A9A2411703F00C98255 /* UserHorizontalSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8A992411703F00C98255 /* UserHorizontalSectionViewModel.swift */; };
+		3C0B8A9A2411703F00C98255 /* UserHorizontalSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8A992411703F00C98255 /* UserHorizontalSectionView.swift */; };
 		3C0B8A9C2411798400C98255 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8A9B2411798400C98255 /* PostView.swift */; };
 		3C0B8AA02411B75A00C98255 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8A9F2411B75A00C98255 /* Post.swift */; };
 		3C0B8AA22411B76400C98255 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA12411B76400C98255 /* Todo.swift */; };
@@ -33,7 +33,7 @@
 		3C0B8A8D24116C7700C98255 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C0B8A9024116C7700C98255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C0B8A9224116C7700C98255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C0B8A992411703F00C98255 /* UserHorizontalSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHorizontalSectionViewModel.swift; sourceTree = "<group>"; };
+		3C0B8A992411703F00C98255 /* UserHorizontalSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHorizontalSectionView.swift; sourceTree = "<group>"; };
 		3C0B8A9B2411798400C98255 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		3C0B8A9F2411B75A00C98255 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3C0B8AA12411B76400C98255 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
@@ -99,7 +99,6 @@
 		3C0B8A982411702A00C98255 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3C0B8A992411703F00C98255 /* UserHorizontalSectionViewModel.swift */,
 				3C0B8AA724120CD300C98255 /* UserPostSectionViewModel.swift */,
 				3C0B8A9B2411798400C98255 /* PostView.swift */,
 				3C0B8AAB2412F3C600C98255 /* UserView.swift */,
@@ -130,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				3C0B8A8824116C7600C98255 /* ContentView.swift */,
+				3C0B8A992411703F00C98255 /* UserHorizontalSectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 				3C0B8AAC2412F3C600C98255 /* UserView.swift in Sources */,
 				3C0B8AA824120CD300C98255 /* UserPostSectionViewModel.swift in Sources */,
 				3C0B8A9C2411798400C98255 /* PostView.swift in Sources */,
-				3C0B8A9A2411703F00C98255 /* UserHorizontalSectionViewModel.swift in Sources */,
+				3C0B8A9A2411703F00C98255 /* UserHorizontalSectionView.swift in Sources */,
 				3C0B8AAA24120EE900C98255 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

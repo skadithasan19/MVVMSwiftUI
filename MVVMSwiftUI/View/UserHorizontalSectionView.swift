@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-struct UserHorizontalSectionViewModel: View {
+struct UserHorizontalSectionView: View {
     
     @EnvironmentObject var networkLayer:NetworkLayer
      
@@ -29,9 +29,9 @@ struct UserHorizontalSectionViewModel: View {
     
 }
 
-struct UserHorizontalSectionViewModel_Previews: PreviewProvider {
+struct UserHorizontalSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        UserHorizontalSectionViewModel()
+        UserHorizontalSectionView()
     }
 }
  
