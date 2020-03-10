@@ -74,13 +74,13 @@
 		3C0B8A8324116C7600C98255 /* MVVMSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				3C0B8A9E2411B73300C98255 /* Model */,
 				3C0B8A9D241179C100C98255 /* Network */,
+				3C0B8A9E2411B73300C98255 /* Model */,
+				3C83DF132418101E0051599F /* View */,
 				3C0B8A982411702A00C98255 /* ViewModels */,
+				3C0B8A8A24116C7700C98255 /* Assets.xcassets */,
 				3C0B8A8424116C7600C98255 /* AppDelegate.swift */,
 				3C0B8A8624116C7600C98255 /* SceneDelegate.swift */,
-				3C0B8A8824116C7600C98255 /* ContentView.swift */,
-				3C0B8A8A24116C7700C98255 /* Assets.xcassets */,
 				3C0B8A8F24116C7700C98255 /* LaunchScreen.storyboard */,
 				3C0B8A9224116C7700C98255 /* Info.plist */,
 				3C0B8A8C24116C7700C98255 /* Preview Content */,
@@ -124,6 +124,14 @@
 				3C0B8AA924120EE900C98255 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3C83DF132418101E0051599F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C0B8A8824116C7600C98255 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
