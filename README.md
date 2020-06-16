@@ -1,5 +1,4 @@
 # MVVMSwiftUI
 API Integration using datataskpublisher and SwiftUI
 
-
-![](https://iosventure.com/MVVMSwiftUI.png)
+I have used https://jsonplaceholder.typicode.com/ as API
