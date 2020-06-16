@@ -15,26 +15,7 @@ struct DashBoardView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
-                HStack(alignment: .top) {
-                    VStack(alignment: .center, spacing: 10) {
-                        Text("User Profile")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding(.top, 10) 
-                        Rectangle().frame(height: 1.0)
-                            .padding(.horizontal, 1.0)
-                            .foregroundColor(Color(ColorUtilities.hexStringToUIColor(hex: "D9D9D9")))
-                        Text("\(viewModel.selectedUser.name)")
-                            .font(.title)
-                            .foregroundColor(.white)
-                        Text("\(viewModel.selectedUser.email)")
-                            .font(.subheadline)
-                            .foregroundColor(.white)
-                        Text("\(viewModel.selectedUser.phone)")
-                            .font(.subheadline)
-                            .foregroundColor(.white).padding(.bottom, 10)
-                    }.background(Color.blue).cornerRadius(10)
-                }.padding()
+                PersonalInfoView(selectedUser: viewModel.selectedUser)
                 
                 HStack {
                     NavigationLink(destination: UserPostSectionView(),
@@ -63,6 +44,34 @@ struct DashBoardView: View {
                 Spacer()
             }
         }
+    }
+}
+
+struct PersonalInfoView: View {
+    
+    var selectedUser:User
+    
+    var body: some View {
+        HStack(alignment: .top) {
+            VStack(alignment: .center, spacing: 10) {
+                Text("User Profile")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding(.top, 10)
+                Rectangle().frame(height: 1.0)
+                    .padding(.horizontal, 1.0)
+                    .foregroundColor(Color(ColorUtilities.hexStringToUIColor(hex: "D9D9D9")))
+                Text("\(selectedUser.name)")
+                    .font(.title)
+                    .foregroundColor(.white)
+                Text("\(selectedUser.email)")
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                Text("\(selectedUser.phone)")
+                    .font(.subheadline)
+                    .foregroundColor(.white).padding(.bottom, 10)
+            }.background(Color.blue).cornerRadius(10)
+        }.padding()
     }
 }
 

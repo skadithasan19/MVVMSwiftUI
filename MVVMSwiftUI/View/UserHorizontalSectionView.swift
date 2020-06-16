@@ -12,7 +12,9 @@ import QGrid
 struct UserHorizontalSectionView: View {
     
     @EnvironmentObject var viewModel:UserViewModel
+    
     @State var showPosts = false
+    
     var body: some View {
         VStack {
             NavigationLink(destination: DashBoardView(), isActive: $showPosts) { EmptyView() }

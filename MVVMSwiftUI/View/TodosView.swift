@@ -39,8 +39,14 @@ struct TodosView: View {
                     }
                 }
             }
-        }.navigationBarTitle("Todos").onAppear {
-            self.todoViewModel.fetchAllTodosFromAPI(userID: self.viewModel.selectedUser.id)
+        }.navigationBarItems(trailing:
+            Button(action: {
+                
+            }, label: {
+                Image(systemName: "plus") 
+            }))
+            .navigationBarTitle("Todos").onAppear {
+                self.todoViewModel.fetchAllTodosFromAPI(userID: self.viewModel.selectedUser.id)
         }
     }
 }

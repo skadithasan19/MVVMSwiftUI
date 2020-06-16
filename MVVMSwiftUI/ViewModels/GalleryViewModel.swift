@@ -16,7 +16,7 @@ class GalleryViewModel: ObservableObject {
     
     private let networkManager = NetworkRequest()
      
-    func fetchAllPhotosFromAPI(albumID:Int) {
+    func fetchAllPhotosFromAPI(albumID:Int) { // /// Using ID 1 for now. since other ID's does not work some times
         networkManager.fetchObjects(requestUrl: "\(URLConfig.albumAPI)/1/photos", model: Photo.self) { (photos) in
             print(photos.compactMap({ $0.thumbnailUrl }))
             self.photos = photos

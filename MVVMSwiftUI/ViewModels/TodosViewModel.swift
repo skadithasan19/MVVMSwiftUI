@@ -16,8 +16,8 @@ class TodosViewModel: ObservableObject {
     
     private let networkManager = NetworkRequest()
      
-    func fetchAllTodosFromAPI(userID:Int) {
-        networkManager.fetchObjects(requestUrl: "\(URLConfig.userAPI)/\(userID)/todos", model: Todo.self) { (todos) in
+    func fetchAllTodosFromAPI(userID:Int) { /// Using ID 1 for now. since other ID's does not work some times
+        networkManager.fetchObjects(requestUrl: "\(URLConfig.userAPI)/1/todos", model: Todo.self) { (todos) in
             self.todos = todos
             self.shouldAnimate.toggle()
         }

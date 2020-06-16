@@ -18,8 +18,8 @@ class AlbumViewModel: ObservableObject {
     
     private let networkManager = NetworkRequest()
      
-    func fetchAllAlbumsFromAPI(userID:Int) {
-        networkManager.fetchObjects(requestUrl: "\(URLConfig.userAPI)/\(userID)/albums", model: Album.self) { (albums) in
+    func fetchAllAlbumsFromAPI(userID:Int) { /// Using ID 1 for now. since other ID's does not work some times
+        networkManager.fetchObjects(requestUrl: "\(URLConfig.userAPI)/1/albums", model: Album.self) { (albums) in
             self.albums = albums
             self.shouldAnimate.toggle()
         }

@@ -10,8 +10,11 @@ import SwiftUI
 import QGrid
 import Utilities
 struct AlbumView: View {
+    
     @EnvironmentObject var viewModel:UserViewModel
+    
     @ObservedObject var albumViewModel = AlbumViewModel()
+    
     var body: some View {
         VStack {
             if albumViewModel.shouldAnimate {
