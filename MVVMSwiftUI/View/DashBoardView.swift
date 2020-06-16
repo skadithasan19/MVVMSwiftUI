@@ -8,41 +8,39 @@
 
 import SwiftUI
 import Utilities
+import CoreLocation
 struct DashBoardView: View {
     
     @EnvironmentObject var viewModel:UserViewModel
-    
+   
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center) {
-                PersonalInfoView(selectedUser: viewModel.selectedUser)
-                
-                HStack {
-                    NavigationLink(destination: UserPostSectionView(),
-                                   isActive: self.$viewModel.dashboardState.showPosts) {
-                                    EmptyView()
-                    }
-                    NavigationLink(destination: AlbumView(),
-                                   isActive: self.$viewModel.dashboardState.showAlbum) {
-                                    EmptyView()
-                    }
-                    NavigationLink(destination: TodosView(),
-                                   isActive: self.$viewModel.dashboardState.showTodos) {
-                                    EmptyView()
-                    }
-                    CustomButton(title: "Album", bgColor: .pink) {
-                        self.viewModel.dashboardState.showAlbum.toggle()
-                    }
-                    CustomButton(title: "Posts", bgColor: .orange) {
-                        self.viewModel.dashboardState.showPosts.toggle()
-                    }
-                    CustomButton(title: "Todos", bgColor: .green) {
-                        self.viewModel.dashboardState.showTodos.toggle()
-                    }
-                }.padding()
-                
-                Spacer()
-            }
+        VStack(alignment: .center) {
+            PersonalInfoView(selectedUser: viewModel.selectedUser)
+            
+            HStack {
+                NavigationLink(destination: UserPostSectionView(),
+                               isActive: self.$viewModel.dashboardState.showPosts) {
+                                EmptyView()
+                }
+                NavigationLink(destination: AlbumView(),
+                               isActive: self.$viewModel.dashboardState.showAlbum) {
+                                EmptyView()
+                }
+                NavigationLink(destination: TodosView(),
+                               isActive: self.$viewModel.dashboardState.showTodos) {
+                                EmptyView()
+                }
+                CustomButton(title: "Album", bgColor: .pink) {
+                    self.viewModel.dashboardState.showAlbum.toggle()
+                }
+                CustomButton(title: "Posts", bgColor: .orange) {
+                    self.viewModel.dashboardState.showPosts.toggle()
+                }
+                CustomButton(title: "Todos", bgColor: .green) {
+                    self.viewModel.dashboardState.showTodos.toggle()
+                }
+            }.padding()
+            MapView(centerCoordinate: viewModel.getUserAnnotation(), annotations: [viewModel.locationManager.LocationPin]) 
         }
     }
 }
