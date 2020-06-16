@@ -10,21 +10,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    init() {
-        UITableView.appearance().separatorColor = .clear // cell separator
-    }
-    
     var body: some View {
-        
         NavigationView {
             VStack {
                 UserHorizontalSectionView()
-                UserPostSectionViewModel()
             }
-            .navigationBarTitle("User Post's")
+            .navigationBarTitle(Text("User Profiles").font(.title), displayMode: .inline)
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

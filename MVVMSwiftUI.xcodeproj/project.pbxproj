@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,10 +18,30 @@
 		3C0B8AA02411B75A00C98255 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8A9F2411B75A00C98255 /* Post.swift */; };
 		3C0B8AA22411B76400C98255 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA12411B76400C98255 /* Todo.swift */; };
 		3C0B8AA42411B76F00C98255 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA32411B76F00C98255 /* HTTPError.swift */; };
-		3C0B8AA624120AF700C98255 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA524120AF700C98255 /* NetworkLayer.swift */; };
-		3C0B8AA824120CD300C98255 /* UserPostSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA724120CD300C98255 /* UserPostSectionViewModel.swift */; };
+		3C0B8AA824120CD300C98255 /* UserPostSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA724120CD300C98255 /* UserPostSectionView.swift */; };
 		3C0B8AAA24120EE900C98255 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AA924120EE900C98255 /* User.swift */; };
 		3C0B8AAC2412F3C600C98255 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8AAB2412F3C600C98255 /* UserView.swift */; };
+		3CD2FF942498681200177B86 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FF932498681200177B86 /* NetworkRequest.swift */; };
+		3CD2FFB324987F6B00177B86 /* URLConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFB224987F6B00177B86 /* URLConfig.swift */; };
+		3CD2FFB6249886F100177B86 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 3CD2FFB5249886F100177B86 /* QGrid */; };
+		3CD2FFB82498889200177B86 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFB72498889200177B86 /* UserViewModel.swift */; };
+		3CD2FFBA24988B9B00177B86 /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFB924988B9B00177B86 /* DashBoardView.swift */; };
+		3CD2FFC0249892FD00177B86 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFBF249892FD00177B86 /* CustomButton.swift */; };
+		3CD2FFC22498944300177B86 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFC12498944300177B86 /* AlbumView.swift */; };
+		3CD2FFC4249895A700177B86 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFC3249895A700177B86 /* CommentsView.swift */; };
+		3CD2FFC62498969D00177B86 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFC52498969D00177B86 /* PostViewModel.swift */; };
+		3CD2FFC8249896AD00177B86 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFC7249896AD00177B86 /* CommentsViewModel.swift */; };
+		3CD2FFCA249896B700177B86 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFC9249896B700177B86 /* AlbumViewModel.swift */; };
+		3CD2FFCC2498970B00177B86 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFCB2498970B00177B86 /* Album.swift */; };
+		3CD2FFCE2499039700177B86 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFCD2499039700177B86 /* AlbumCell.swift */; };
+		3CD2FFD02499052A00177B86 /* GallaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFCF2499052A00177B86 /* GallaryView.swift */; };
+		3CD2FFD2249906A200177B86 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFD1249906A200177B86 /* Comment.swift */; };
+		3CD2FFD524990B4700177B86 /* Utilities in Frameworks */ = {isa = PBXBuildFile; productRef = 3CD2FFD424990B4700177B86 /* Utilities */; };
+		3CD2FFD72499149400177B86 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFD62499149400177B86 /* GalleryViewModel.swift */; };
+		3CD2FFD9249914F100177B86 /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFD8249914F100177B86 /* TodosView.swift */; };
+		3CD2FFDB2499153100177B86 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFDA2499153100177B86 /* TodosViewModel.swift */; };
+		3CD2FFDE24991C6C00177B86 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFDD24991C6C00177B86 /* ImageCache.swift */; };
+		3CD2FFE024991D0600177B86 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2FFDF24991D0600177B86 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +58,28 @@
 		3C0B8A9F2411B75A00C98255 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3C0B8AA12411B76400C98255 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		3C0B8AA32411B76F00C98255 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
-		3C0B8AA524120AF700C98255 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
-		3C0B8AA724120CD300C98255 /* UserPostSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostSectionViewModel.swift; sourceTree = "<group>"; };
+		3C0B8AA724120CD300C98255 /* UserPostSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostSectionView.swift; sourceTree = "<group>"; };
 		3C0B8AA924120EE900C98255 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3C0B8AAB2412F3C600C98255 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		3CD2FF932498681200177B86 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		3CD2FFB224987F6B00177B86 /* URLConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfig.swift; sourceTree = "<group>"; };
+		3CD2FFB72498889200177B86 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		3CD2FFB924988B9B00177B86 /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		3CD2FFBF249892FD00177B86 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		3CD2FFC12498944300177B86 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		3CD2FFC3249895A700177B86 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		3CD2FFC52498969D00177B86 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		3CD2FFC7249896AD00177B86 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		3CD2FFC9249896B700177B86 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		3CD2FFCB2498970B00177B86 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		3CD2FFCD2499039700177B86 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		3CD2FFCF2499052A00177B86 /* GallaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryView.swift; sourceTree = "<group>"; };
+		3CD2FFD1249906A200177B86 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3CD2FFD62499149400177B86 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		3CD2FFD8249914F100177B86 /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
+		3CD2FFDA2499153100177B86 /* TodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
+		3CD2FFDD24991C6C00177B86 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		3CD2FFDF24991D0600177B86 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD2FFB6249886F100177B86 /* QGrid in Frameworks */,
+				3CD2FFD524990B4700177B86 /* Utilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				3C0B8A9D241179C100C98255 /* Network */,
+				3CD2FFDC24991C5B00177B86 /* Helper */,
 				3C0B8A9E2411B73300C98255 /* Model */,
-				3C83DF132418101E0051599F /* View */,
 				3C0B8A982411702A00C98255 /* ViewModels */,
+				3C83DF132418101E0051599F /* View */,
 				3C0B8A8A24116C7700C98255 /* Assets.xcassets */,
 				3C0B8A8424116C7600C98255 /* AppDelegate.swift */,
 				3C0B8A8624116C7600C98255 /* SceneDelegate.swift */,
@@ -99,9 +140,12 @@
 		3C0B8A982411702A00C98255 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3C0B8AA724120CD300C98255 /* UserPostSectionViewModel.swift */,
-				3C0B8A9B2411798400C98255 /* PostView.swift */,
-				3C0B8AAB2412F3C600C98255 /* UserView.swift */,
+				3CD2FFB72498889200177B86 /* UserViewModel.swift */,
+				3CD2FFC52498969D00177B86 /* PostViewModel.swift */,
+				3CD2FFC7249896AD00177B86 /* CommentsViewModel.swift */,
+				3CD2FFC9249896B700177B86 /* AlbumViewModel.swift */,
+				3CD2FFDA2499153100177B86 /* TodosViewModel.swift */,
+				3CD2FFD62499149400177B86 /* GalleryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -109,7 +153,8 @@
 		3C0B8A9D241179C100C98255 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				3C0B8AA524120AF700C98255 /* NetworkLayer.swift */,
+				3CD2FFB224987F6B00177B86 /* URLConfig.swift */,
+				3CD2FF932498681200177B86 /* NetworkRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -120,7 +165,10 @@
 				3C0B8A9F2411B75A00C98255 /* Post.swift */,
 				3C0B8AA12411B76400C98255 /* Todo.swift */,
 				3C0B8AA32411B76F00C98255 /* HTTPError.swift */,
+				3CD2FFCB2498970B00177B86 /* Album.swift */,
 				3C0B8AA924120EE900C98255 /* User.swift */,
+				3CD2FFDF24991D0600177B86 /* Photo.swift */,
+				3CD2FFD1249906A200177B86 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,10 +176,36 @@
 		3C83DF132418101E0051599F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3CD2FFBE249892E400177B86 /* Subviews */,
 				3C0B8A8824116C7600C98255 /* ContentView.swift */,
 				3C0B8A992411703F00C98255 /* UserHorizontalSectionView.swift */,
+				3CD2FFB924988B9B00177B86 /* DashBoardView.swift */,
+				3C0B8AA724120CD300C98255 /* UserPostSectionView.swift */,
+				3CD2FFC12498944300177B86 /* AlbumView.swift */,
+				3CD2FFCF2499052A00177B86 /* GallaryView.swift */,
+				3CD2FFC3249895A700177B86 /* CommentsView.swift */,
+				3CD2FFD8249914F100177B86 /* TodosView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3CD2FFBE249892E400177B86 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				3C0B8A9B2411798400C98255 /* PostView.swift */,
+				3C0B8AAB2412F3C600C98255 /* UserView.swift */,
+				3CD2FFBF249892FD00177B86 /* CustomButton.swift */,
+				3CD2FFCD2499039700177B86 /* AlbumCell.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		3CD2FFDC24991C5B00177B86 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3CD2FFDD24991C6C00177B86 /* ImageCache.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +224,10 @@
 			dependencies = (
 			);
 			name = MVVMSwiftUI;
+			packageProductDependencies = (
+				3CD2FFB5249886F100177B86 /* QGrid */,
+				3CD2FFD424990B4700177B86 /* Utilities */,
+			);
 			productName = MVVMSwiftUI;
 			productReference = 3C0B8A8124116C7600C98255 /* MVVMSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +256,10 @@
 				Base,
 			);
 			mainGroup = 3C0B8A7824116C7600C98255;
+			packageReferences = (
+				3CD2FFB4249886F100177B86 /* XCRemoteSwiftPackageReference "QGrid" */,
+				3CD2FFD324990B4700177B86 /* XCRemoteSwiftPackageReference "Utilities" */,
+			);
 			productRefGroup = 3C0B8A8224116C7600C98255 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -205,18 +287,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0B8AA624120AF700C98255 /* NetworkLayer.swift in Sources */,
+				3CD2FFC8249896AD00177B86 /* CommentsViewModel.swift in Sources */,
+				3CD2FF942498681200177B86 /* NetworkRequest.swift in Sources */,
+				3CD2FFC22498944300177B86 /* AlbumView.swift in Sources */,
+				3CD2FFD02499052A00177B86 /* GallaryView.swift in Sources */,
+				3CD2FFCA249896B700177B86 /* AlbumViewModel.swift in Sources */,
+				3CD2FFC4249895A700177B86 /* CommentsView.swift in Sources */,
 				3C0B8AA22411B76400C98255 /* Todo.swift in Sources */,
 				3C0B8A8524116C7600C98255 /* AppDelegate.swift in Sources */,
+				3CD2FFDB2499153100177B86 /* TodosViewModel.swift in Sources */,
 				3C0B8A8724116C7600C98255 /* SceneDelegate.swift in Sources */,
+				3CD2FFCE2499039700177B86 /* AlbumCell.swift in Sources */,
+				3CD2FFD2249906A200177B86 /* Comment.swift in Sources */,
+				3CD2FFC0249892FD00177B86 /* CustomButton.swift in Sources */,
 				3C0B8A8924116C7600C98255 /* ContentView.swift in Sources */,
 				3C0B8AA42411B76F00C98255 /* HTTPError.swift in Sources */,
+				3CD2FFBA24988B9B00177B86 /* DashBoardView.swift in Sources */,
 				3C0B8AA02411B75A00C98255 /* Post.swift in Sources */,
+				3CD2FFD9249914F100177B86 /* TodosView.swift in Sources */,
 				3C0B8AAC2412F3C600C98255 /* UserView.swift in Sources */,
-				3C0B8AA824120CD300C98255 /* UserPostSectionViewModel.swift in Sources */,
+				3CD2FFD72499149400177B86 /* GalleryViewModel.swift in Sources */,
+				3C0B8AA824120CD300C98255 /* UserPostSectionView.swift in Sources */,
 				3C0B8A9C2411798400C98255 /* PostView.swift in Sources */,
+				3CD2FFB324987F6B00177B86 /* URLConfig.swift in Sources */,
 				3C0B8A9A2411703F00C98255 /* UserHorizontalSectionView.swift in Sources */,
+				3CD2FFE024991D0600177B86 /* Photo.swift in Sources */,
+				3CD2FFB82498889200177B86 /* UserViewModel.swift in Sources */,
+				3CD2FFCC2498970B00177B86 /* Album.swift in Sources */,
 				3C0B8AAA24120EE900C98255 /* User.swift in Sources */,
+				3CD2FFC62498969D00177B86 /* PostViewModel.swift in Sources */,
+				3CD2FFDE24991C6C00177B86 /* ImageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +514,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3CD2FFB4249886F100177B86 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		3CD2FFD324990B4700177B86 /* XCRemoteSwiftPackageReference "Utilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/skadithasan19/Utilities.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3CD2FFB5249886F100177B86 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CD2FFB4249886F100177B86 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+		3CD2FFD424990B4700177B86 /* Utilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CD2FFD324990B4700177B86 /* XCRemoteSwiftPackageReference "Utilities" */;
+			productName = Utilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C0B8A7924116C7600C98255 /* Project object */;
 }

@@ -8,25 +8,22 @@
 
 import SwiftUI
 import Combine
-
+import QGrid
 struct UserHorizontalSectionView: View {
     
-    @EnvironmentObject var networkLayer:NetworkLayer
-     
+    @EnvironmentObject var viewModel:UserViewModel
+    @State var showPosts = false
     var body: some View {
-        ScrollView(.horizontal) {
-            HStack(spacing: 10) {
-                ForEach(networkLayer.usersArray, id: \.name) { userObj in
-                    UserView(user: userObj).onTapGesture {
-                        self.networkLayer.fetchUserPostFromAPI(userId: "\(userObj.id)")
-                        self.networkLayer.objectWillChange.send()
-                    }
+        VStack {
+            NavigationLink(destination: DashBoardView(), isActive: $showPosts) { EmptyView() }
+            QGrid(viewModel.usersArray, columns: 3) {
+                UserView(user: $0) { (user) in
+                    self.viewModel.selectedUser = user
+                    self.showPosts.toggle()
                 }
             }
-            .padding(.leading, 10)
         }
     }
-    
 }
 
 struct UserHorizontalSectionView_Previews: PreviewProvider {
@@ -34,4 +31,4 @@ struct UserHorizontalSectionView_Previews: PreviewProvider {
         UserHorizontalSectionView()
     }
 }
- 
+
